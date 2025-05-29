@@ -4,3 +4,7 @@
 - Playwright: Playwright 실습
 
 ## 각 자동화 실습 프로젝트에 테스트 케이스 링크가 포함 됨
+
+## 목표
+
+- jira + xray + playwright 연계한 포트폴리오 제작
