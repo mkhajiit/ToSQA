@@ -1,0 +1,11 @@
+// TypeScript에게 "이 파일은 CommonJS (Node 전통 방식)로 변환해줘" 라고 지시
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
