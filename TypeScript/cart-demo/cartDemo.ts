@@ -21,5 +21,12 @@ function printTotalCost(cart: IProduct[]) {
   console.log(result);
 }
 
+function doubleCost(cart: IProduct[]) {
+  const double = cart.map((item) => {
+    return { id: item.id, name: item.name, price: item.price * 2 };
+  });
+  console.log(double);
+}
 printCartItemList(myCart);
 printTotalCost(myCart);
+doubleCost(myCart);
