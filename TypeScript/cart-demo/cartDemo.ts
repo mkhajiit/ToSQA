@@ -11,9 +11,15 @@ const myCart: IProduct[] = [
 ];
 
 function printCartItemList(cart: IProduct[]) {
-  cart.map((item) => {
+  cart.forEach((item) => {
     console.log(`id:${item.id} 이름:${item.name}, 가격:${item.price}`);
   });
 }
 
+function printTotalCost(cart: IProduct[]) {
+  const result = cart.reduce((total, item) => total + item.price, 0);
+  console.log(result);
+}
+
 printCartItemList(myCart);
+printTotalCost(myCart);
