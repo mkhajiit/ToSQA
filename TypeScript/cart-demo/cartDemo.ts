@@ -27,6 +27,7 @@ function doubleCost(cart: IProduct[]) {
   });
   console.log(double);
 }
+
 printCartItemList(myCart);
 printTotalCost(myCart);
 doubleCost(myCart);
