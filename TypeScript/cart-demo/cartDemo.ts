@@ -1,14 +1,4 @@
-interface IProduct {
-  id: number;
-  name: string;
-  price: number;
-}
-
-const myCart: IProduct[] = [
-  { id: 1, name: '사과', price: 1000 },
-  { id: 2, name: '바나나', price: 1500 },
-  { id: 3, name: '딸기', price: 2000 },
-];
+import myCart, { IProduct } from '../constants/myCart';
 
 function printCartItemList(cart: IProduct[]) {
   cart.forEach((item) => {

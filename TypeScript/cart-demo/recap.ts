@@ -1,15 +1,4 @@
-interface IProduct {
-  id: number;
-  name: string;
-  price: number;
-}
-
-const myAnotherCart: IProduct[] = [
-  { id: 1, name: '사과', price: 1000 },
-  { id: 2, name: '바나나', price: 1500 },
-  { id: 3, name: '딸기', price: 2000 },
-  { id: 4, name: '포도', price: 3000 },
-];
+import myCart, { IProduct } from '../constants/myCart';
 
 function printCartList(cart: IProduct[]) {
   cart.forEach((item) => {
@@ -30,6 +19,6 @@ function printTwiceCost(cart: IProduct[]) {
   console.log(twicedCostCartList);
 }
 
-printCartList(myAnotherCart);
-printCostSum(myAnotherCart);
-printTwiceCost(myAnotherCart);
+printCartList(myCart);
+printCostSum(myCart);
+printTwiceCost(myCart);
