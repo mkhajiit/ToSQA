@@ -6,11 +6,15 @@ export default defineConfig({
       name: 'first',
       testDir: './Playwright/first-project/tests',
     },
+    {
+      name: 'second',
+      testDir: './Playwright/second-project/tests',
+    },
   ],
   use: {
     headless: false,
     launchOptions: {
-      slowMo: 500, // 이렇게 넣어야 타입스크립트 오류 안 남
+      slowMo: 300, // 이렇게 넣어야 타입스크립트 오류 안 남
     },
   },
 });
