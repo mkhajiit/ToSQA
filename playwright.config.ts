@@ -10,6 +10,10 @@ export default defineConfig({
       name: 'second',
       testDir: './Playwright/second-project/tests',
     },
+    {
+      name: 'orangeHRM',
+      testDir: './Playwright/orangeHRM/tests',
+    },
   ],
   use: {
     headless: false,
