@@ -17,3 +17,6 @@ test('로그인 성공 테스트', async ({ page }) => {
 
   await page.waitForTimeout(3000);
 });
+
+// select 요소에서 지정된 옵션을 선택
+// await page.getByLabel('Job Title').selectOption({ label: 'QA Engineer' });
