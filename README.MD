@@ -17,3 +17,4 @@
 ## 기억해야하는 명령어
 
 npx playwright test --project=second
+python 파일이름.py
