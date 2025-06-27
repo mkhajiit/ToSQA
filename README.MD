@@ -5,8 +5,6 @@
 - Python: Python 언어 학습
 - Selenium: Selenium 실습
 
-## 각 자동화 실습 프로젝트에 테스트 케이스 링크가 포함 됨
-
 ## 목표
 
 - python, javascript, Java 순으로 언어를 학습할것
