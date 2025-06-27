@@ -16,3 +16,4 @@
 
 npx playwright test --project=second
 python 파일이름.py
+source .venv/Scripts/activate
