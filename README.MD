@@ -17,6 +17,7 @@
 npx playwright test --project=second
 python 파일이름.py
 source .venv/Scripts/activate
+pytest test_google.py
 
 ## 내일 과제
 
