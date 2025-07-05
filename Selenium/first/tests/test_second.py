@@ -19,7 +19,18 @@ def test_login_error(driver):
 
   wait = WebDriverWait(driver,10)
 
-  login(driver)
+  login(driver,"differentname","differentpassword")
 
   error_box = wait.until(EC.presence_of_element_located((By.CLASS_NAME,"error-message-container")))
   assert "Epic sadface" in error_box.text
+
+# 정확한 입력 테스트
+def test_login_success(driver):
+
+  wait = WebDriverWait(driver,10)
+
+  login(driver,"standard_user","secret_sauce")
+
+  inventory = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '[data-test="inventory-container"]')))
+
+  assert inventory is not None

@@ -17,7 +17,7 @@
 
 파이썬 가상환경 만드는 절차
 npx playwright test --project=second
-python 파일이름.py
+python 파일이름
 source .venv/Scripts/activate
 pytest test_google.py
 
