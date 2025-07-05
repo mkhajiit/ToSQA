@@ -1,19 +1,33 @@
 import pytest
 from helpers.helper import login
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.firefox import GeckoDriverManager # 파이어폭스 관리
 
-@pytest.fixture
-def driver():
-  options = Options()
-  options.add_argument("--headless")  # headless 모드
+@pytest.fixture(params=["chrome","firefox"]) # chrome, firefox 한번씩 실행
+def driver(request): # 인자를 넘기지 않아도 pytest가 request가 함수 호출시에 알아서 넣어줌
+  browser = request.param
 
-  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+  if browser == "chrome":
+    options = ChromeOptions()
+    options.add_argument("--headless") # headless 모드
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+  
+  elif browser == "firefox":
+    options = FirefoxOptions()
+    options.headless = True # 파이어폭스의 권장되는 headless 모드
+    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=options)
+
+  else:
+    raise ValueError(f"아직 테스트 하지않는 지원안되는 브라우저 입니다")
+  
   driver.get("https://www.saucedemo.com/")
   yield driver  # 이 시점 이전까지는 테스트 실행, Pytest가 yield 기준으로 테스트 전후 작업을 자동으로 처리해줌
   driver.quit() # 테스트 끝나면 브라우저 종료
