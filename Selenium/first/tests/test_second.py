@@ -1,6 +1,7 @@
 import pytest
 from helpers.helper import login
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
@@ -9,7 +10,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture
 def driver():
-  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+  options = Options()
+  options.add_argument("--headless")  # headless 모드
+
+  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
   driver.get("https://www.saucedemo.com/")
   yield driver  # 이 시점 이전까지는 테스트 실행, Pytest가 yield 기준으로 테스트 전후 작업을 자동으로 처리해줌
   driver.quit() # 테스트 끝나면 브라우저 종료
