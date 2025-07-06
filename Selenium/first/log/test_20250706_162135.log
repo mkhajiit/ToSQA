@@ -1,0 +1,36 @@
+2025-07-06 16:21:36,282 - INFO - ====== WebDriver manager ======
+2025-07-06 16:21:37,890 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:21:37,923 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:21:37,951 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\137.0.7151.119\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-06 16:21:42,247 - INFO - ====== WebDriver manager ======
+2025-07-06 16:21:43,633 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-06 16:21:43,906 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-06 16:21:43,927 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-06 16:21:53,006 - INFO - ====== WebDriver manager ======
+2025-07-06 16:21:54,255 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:21:54,276 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:21:54,298 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\137.0.7151.119\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-06 16:21:58,382 - INFO - ====== WebDriver manager ======
+2025-07-06 16:21:59,592 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-06 16:21:59,615 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-06 16:21:59,980 - INFO - ====== WebDriver manager ======
+2025-07-06 16:22:01,193 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:22:01,219 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-06 16:22:01,238 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\137.0.7151.119\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-06 16:22:02,973 - ERROR - 테스트 실패: tests/test_second.py::test_screenshot[chrome]
+2025-07-06 16:22:02,973 - ERROR - 실패 메시지: driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="dba38844016df01cfae2af089531a0bb")>
+
+    def test_screenshot(driver):
+    
+      expected_url = "https://www.saucedemo.com/inventory.html"
+>     assert driver.current_url == expected_url, f"URL이 예상과 다릅니다. 현재 URL: {driver.current_url}"
+E     AssertionError: URL이 예상과 다릅니다. 현재 URL: https://www.saucedemo.com/
+E     assert 'https://www.saucedemo.com/' == 'https://www....nventory.html'
+E       
+E       [0m[91m- https://www.saucedemo.com/inventory.html[39;49;00m[90m[39;49;00m
+E       ?                           --------------[90m[39;49;00m
+E       [92m+ https://www.saucedemo.com/[39;49;00m[90m[39;49;00m
+
+tests\test_second.py:62: AssertionError
+2025-07-06 16:22:05,113 - INFO - ====== WebDriver manager ======
+2025-07-06 16:22:06,336 - INFO - Get LATEST geckodriver version for 140.0 firefox
