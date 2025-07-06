@@ -24,4 +24,3 @@ pytest test_google.py
 ## 내일 과제
 
 - Appium 설치해서 써보기
-- Selenium 로그, 스크린샷 출력하는 기능 사용해보기
