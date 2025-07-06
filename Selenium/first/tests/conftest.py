@@ -1,8 +1,18 @@
 # 테스트 후 에러가 발생했을때 스크린샷을 남기도록 하는 훅 함수
 import os
 import pytest
+import logging
 
+# 스크린샷, 로그 저장 폴더 생성
 os.makedirs("screenshots", exist_ok=True)
+os.makedirs("log", exist_ok=True)
+
+# 로거 설정
+logging.basicConfig(
+    filename='log/test.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # 훅 함수에 추가 옵션을 주거나 명시적으로 표시할 때 쓴다.
 # hookwrapper=True → 훅 함수가 내부에서 yield를 써서 pytest 실행 흐름을 감쌀 때 필요하다.
@@ -23,3 +33,7 @@ def pytest_runtest_makereport(item, call):
             filename = f"screenshots/{item.name}_{browser_name}.png"
             driver.save_screenshot(filename)
             print(f"스크린샷 저장됨: {filename}")
+            logging.error(f"테스트 실패: {item.nodeid}")
+            logging.error(f"실패 메시지: {rep.longrepr}")
+        else:
+            logging.error(f"테스트 '{item.name}' 실패! WebDriver 인스턴스를 찾을 수 없음.")
