@@ -19,11 +19,13 @@ def driver(request): # 인자를 넘기지 않아도 pytest가 request가 함수
     options = ChromeOptions()
     options.add_argument("--headless") # headless 모드
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-  
+    driver.browser_name = "chrome"
+
   elif browser == "firefox":
     options = FirefoxOptions()
-    options.headless = True # 파이어폭스의 권장되는 headless 모드
+    options.add_argument("--headless")
     driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=options)
+    driver.browser_name = "firefox"
 
   else:
     raise ValueError(f"아직 테스트 하지않는 지원안되는 브라우저 입니다")
@@ -52,3 +54,9 @@ def test_login_success(driver):
   inventory = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '[data-test="inventory-container"]')))
 
   assert inventory is not None
+
+# 에러 스크린샷 확인 테스트
+def test_screenshot(driver):
+
+  expected_url = "https://www.saucedemo.com/inventory.html"
+  assert driver.current_url == expected_url, f"URL이 예상과 다릅니다. 현재 URL: {driver.current_url}"
