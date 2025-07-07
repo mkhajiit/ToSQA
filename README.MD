@@ -10,8 +10,7 @@
 
 - python, javascript, Java 순으로 언어를 학습할것
 - playwright, Appium, Selenium 순으로 자동화 라이브러리 학습할것
-- 가능하다면 매일 github 커밋하고
-- 영어 회화 공부용으로 opic 해보기
+- 하루 이력서 1개씩 제출하기
 
 ## 기억해야하는 명령어
 
