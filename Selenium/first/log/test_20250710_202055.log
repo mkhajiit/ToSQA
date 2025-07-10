@@ -1,0 +1,24 @@
+2025-07-10 20:20:56,386 - INFO - ====== WebDriver manager ======
+2025-07-10 20:20:57,827 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:20:57,855 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:20:57,879 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-10 20:21:02,109 - INFO - ====== WebDriver manager ======
+2025-07-10 20:21:03,423 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:03,753 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:03,801 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-10 20:21:13,022 - INFO - ====== WebDriver manager ======
+2025-07-10 20:21:14,277 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:21:14,299 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:21:14,330 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-10 20:21:18,371 - INFO - ====== WebDriver manager ======
+2025-07-10 20:21:20,131 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:20,161 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:20,185 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-10 20:21:30,577 - INFO - ====== WebDriver manager ======
+2025-07-10 20:21:32,076 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:21:32,097 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-10 20:21:32,122 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\chromedriver\win64\138.0.7204.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-07-10 20:21:36,615 - INFO - ====== WebDriver manager ======
+2025-07-10 20:21:38,040 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:38,064 - INFO - Get LATEST geckodriver version for 140.0 firefox
+2025-07-10 20:21:38,088 - INFO - Driver [C:\Users\JeHeon\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
